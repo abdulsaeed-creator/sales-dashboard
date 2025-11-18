@@ -11,8 +11,8 @@ st.markdown("##")
 # A senior analyst caches data to prevent reloading it on every user interaction.
 @st.cache_data
 def load_data():
-    # Using a different, known-stable public CSV for sales data
-    url = "https://raw.githubusercontent.com/dataprofessor/data/master/supermarket_sales.csv"
+    # Using a GitHub Gist URL, which is less likely to be blocked by hosting services
+    url = "https://gist.githubusercontent.com/ajduberstein/7311181/raw/012693240294b2a8d348a21f7c70da16be5332c9/superstore.csv"
     df = pd.read_csv(url)
     return df
 
