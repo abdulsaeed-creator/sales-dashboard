@@ -10,11 +10,10 @@ st.markdown("##")
 # 2. Load Real Data (Cached for performance)
 # A senior analyst caches data to prevent reloading it on every user interaction.
 @st.cache_data
-def get_data():
-    # Using a public URL for the 'Superstore' dataset
-    url = "https://raw.githubusercontent.com/jeaggo/tc39-test2/master/superstore.csv"
+def load_data():
+    # Using a different, known-stable public CSV for sales data
+    url = "https://raw.githubusercontent.com/dataprofessor/data/master/supermarket_sales.csv"
     df = pd.read_csv(url)
-    # Rename columns to be Python-friendly if needed, or use as is
     return df
 
 try:
